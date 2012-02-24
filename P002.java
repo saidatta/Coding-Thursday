@@ -20,21 +20,21 @@ public class P002
 	//time1
 	long t = System.currentTimeMillis();
 	//initiating the inital terms.
- 	 int x = 0;
-	 int y =1 ;
-	 int sum1 = x;
-	 int sum2 = 0;
-	 while (sum1 < 4000000 ){ // loop for the answer (even-valued termms).
-		 sum1 = x+y;
-		 x = y;
-		 y = sum1;
+ 	 int f1 = 0;
+	 int f2 =1 ;
+	 int sum = f1;
+	 int total = 0;
+	 while (sum < 4000000 ){ // loop for the answer (even-valued termms).
+		 sum = f1+f2; // addinng the two terms.
+		 f1 = f2; //swapping
+		 f2 = sum; //getting the new element.
 
-		 if (sum1 % 2 ==0){
-			 sum2 += sum1;
+		 if (sum % 2 ==0){ // even-valued terms check.
+			 total += sum; //adding the total.
 		 }
 		 
 	 }
-		System.out.println(sum2);  // print the answer.
+		System.out.println(total);  // print the answer.
 		System.out.println(("Time "+(System.currentTimeMillis() - t)/1000.0));
 	 }
 
