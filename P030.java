@@ -17,12 +17,16 @@ public class P030
 	{
 		long sum = 0;
 
-	for(int i = 2;i<531441;i++)								if(compute(i))
-			sum+=i;
+	for(int i = 2;i<531441;i++)										if(compute(i))
+					sum+=i;
 
-										/*
-The maximum value for one digit is 9^5 = 59049. We can find 			out the maximum possible sum for a given number of digits by 			multiplying 59049 with the number of digits.
-																				Let's say we're gonna check the number 123456789. That's 9 			digits, so the maximum sum would be 9*59049 = 531441
+/*
+The maximum value for one digit is 9^5 = 59049.
+We can find out the maximum possible sum for a given 
+number of digits by multiplying 59049 with the number 
+of digits.
+																				Let's say we're gonna check the number 123456789. 
+That's 9 digits, so the maximum sum would be 9*59049 = 531441
 										*/
 	System.out.println(sum); // printing the sum.
 	
